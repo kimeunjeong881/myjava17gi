@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context crossContext="true">
+	<!-- 커넥션풀: 일정개수의 커넥션객체들을 미리 생성저장하 여 필요한 페이지에게 대여하였다가 반납회수되어 재활용 함 -->
+	<!-- 목적 : DBCP를 톰켓 7서버에 자원으로 등록 name: dbcp 객체 자원명(식별자 OracleDB) username:계정명 
+		url :주소 minIdle : 연결객체 시작개수 maxActive:연결객체최대개수 factory : 구현클래스 -->
+	<!-- <Resource name="jdbc/myoracle" auth="Container" type="javax.sql.DataSource" 
+		username="scott" password="tiger" driverClassName="oracle.jdbc.driver.OracleDriver" 
+		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" url="jdbc:oracle:thin:@127.0.0.1:1521:xe" 
+		maxActive="49" minIdle="20" /> -->
+	<!-- 목적 : DBCP2를 톰켓 8서버에 자원으로 등록 -->
+	<Resource name="jdbc/myoracle" auth="Container" type="javax.sql.DataSource"
+		username="scott" password="tiger" driverClassName="oracle.jdbc.driver.OracleDriver"
+		url="jdbc:oracle:thin:@127.0.0.1:1521:xe" />
+</Context>
+
+
+
